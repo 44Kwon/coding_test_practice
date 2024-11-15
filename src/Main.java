@@ -2,17 +2,20 @@ import java.util.Scanner;
 
 
 public class Main {
-    public String solution(String str) {
-        char[] charArr = str.toCharArray();
+    public String solution(String s) {
+        char[] charArr = s.toCharArray();
+        int start = 0;
+        int end = charArr.length-1;
 
-        for (int i = 0; i < charArr.length; i++) {
-            if (charArr[i] < 'a') {
-                charArr[i] = Character.toLowerCase(charArr[i]);
-            } else {
-                charArr[i] = Character.toUpperCase(charArr[i]);
+        while (start < end) {
+            if (Character.isAlphabetic(charArr[start]) && Character.isAlphabetic(charArr[end])) {
+                char a = charArr[end];
+                charArr[end] = charArr[start];
+                charArr[start] = a;
             }
+            start++;
+            end--;
         }
-
         return String.valueOf(charArr);
     }
 
