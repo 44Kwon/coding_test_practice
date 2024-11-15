@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Main {
+public class String5 {
     public String solution(String s) {
         char[] charArr = s.toCharArray();
         int lt = 0;
@@ -22,7 +22,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        String5 T = new String5();
         Scanner kb = new Scanner(System.in);
         String str = kb.next();
         System.out.print(T.solution(str));

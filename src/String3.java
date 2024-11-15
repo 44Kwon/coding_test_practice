@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-
+//indexOf와 substring으로 풀어보기
 public class String3 {
     public String solution(String str) {
         String[] arr = str.split(" ");
