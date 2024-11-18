@@ -3,22 +3,20 @@ import java.util.Scanner;
 
 public class Main {
     public String solution(String s) {
-        char[] charArr = s.toCharArray();
-        int lt = 0;
-        int rt = charArr.length-1;
-
-        while (lt < rt) {
-            if (!Character.isAlphabetic(charArr[lt])) lt++;
-            else if (!Character.isAlphabetic(charArr[rt])) rt--;
-            else {
-                char tmp = charArr[rt];
-                charArr[rt] = charArr[lt];
-                charArr[lt] = tmp;
-                lt++;
-                rt--;
+        char[] charArray = s.toCharArray();
+        String answer = "";
+        for (int i = 0; i < charArray.length; i++) {
+            int num = 0;
+            for (int j = i + 1; j < charArray.length; j++) {
+                if (charArray[i] == charArray[j]) {
+                    num++;
+                }
+            }
+            if (num == 0) {
+                answer += charArray[i];
             }
         }
-        return String.valueOf(charArr);
+        return answer;
     }
 
     public static void main(String[] args) {
