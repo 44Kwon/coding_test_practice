@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 //꼭 다시 풀어보기 어려움!!!
 //생각 다시 해보기
-public class Main {
-    public int[] solution(String s1, String s2) {
-        int[] intArr = new int[s1.length()];
+public class String10 {
+    public int[] solution(String s, char c) {
+        int[] intArr = new int[s.length()];
         //p를 1000으로 두는 이유
         int p = 1000;
-        for (int i = 0; i < s1.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
 
-            if (s1.charAt(i) == s2.charAt(0)) {
+            if (s.charAt(i) == c) {
                 p = 0;
                 intArr[i] = p;
             } else {
@@ -20,9 +20,9 @@ public class Main {
 
         p = 1000;
 
-        for (int i = s1.length()-1; i >= 0; i--) {
+        for (int i = s.length()-1; i >= 0; i--) {
 
-            if (s1.charAt(i) == s2.charAt(0)) {
+            if (s.charAt(i) == c) {
                 p = 0;
             } else {
                 p++;
@@ -35,12 +35,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        String10 T = new String10();
         Scanner kb = new Scanner(System.in);
         String str1 = kb.next();
-        String str2 = kb.next();
+        char c = kb.next().charAt(0);
 
-        for (int i : T.solution(str1,str2)) {
+        for (int i : T.solution(str1,c)) {
             System.out.print(i + " ");
         }
     }
