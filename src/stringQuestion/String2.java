@@ -1,3 +1,5 @@
+package stringQuestion;
+
 import java.util.Scanner;
 
 

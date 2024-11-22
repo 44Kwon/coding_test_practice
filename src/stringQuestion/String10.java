@@ -1,3 +1,5 @@
+package stringQuestion;
+
 import java.util.Scanner;
 
 //꼭 다시 풀어보기 어려움!!!

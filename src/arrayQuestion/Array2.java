@@ -1,9 +1,10 @@
+package arrayQuestion;
+
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 
-public class Main {
+public class Array2 {
     public int solution(int n, int[] arr) {
         ArrayList<Integer> list = new ArrayList<>();
         int maxNum = 0;
@@ -19,7 +20,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        Array2 T = new Array2();
         Scanner kb = new Scanner(System.in);
         int num = kb.nextInt();
         int[] numArr = new int[num];

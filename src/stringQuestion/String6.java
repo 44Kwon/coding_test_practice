@@ -1,3 +1,5 @@
+package stringQuestion;
+
 import java.util.Scanner;
 
 //indexOf가 효율적인 문제

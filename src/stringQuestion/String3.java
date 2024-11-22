@@ -1,3 +1,5 @@
+package stringQuestion;
+
 import java.util.Scanner;
 
 //indexOf와 substring으로 풀어보기
