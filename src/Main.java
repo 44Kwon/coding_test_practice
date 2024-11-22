@@ -4,18 +4,23 @@ import java.util.Scanner;
 
 
 public class Main {
-    public int solution(int n, int[] arr) {
+    public ArrayList<Integer> solution(int n, int[] arr) {
         ArrayList<Integer> list = new ArrayList<>();
-        int maxNum = 0;
-        int answer = 0;
+        int ok = 0;
         for (int i : arr) {
-            if (maxNum < i) {
-                answer++;
-                maxNum = i;
+            String s = new StringBuilder(""+i).reverse().toString();
+            int num = Integer.parseInt(s);
+            for (int j = 2; j <= Math.sqrt(num); j++) {
+                ok = 1;
+                if (num % j == 0) {
+                    ok = 0;
+                    break;
+                }
             }
+            if (ok == 1) list.add(num);
         }
 
-        return answer;
+        return list;
     }
 
     public static void main(String[] args) {
@@ -27,9 +32,8 @@ public class Main {
             numArr[i] = kb.nextInt();
         }
 
-        System.out.println(T.solution(num,numArr));
-//        for (int i : T.solution(num, numArr)) {
-//            System.out.print(i + " ");
-//        }
+        for (int i : T.solution(num, numArr)) {
+            System.out.print(i + " ");
+        }
     }
 }
