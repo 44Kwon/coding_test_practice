@@ -1,8 +1,10 @@
-import java.util.*;
+package arrayQuestion;
+
+import java.util.Scanner;
 
 
 //다시 풀어보기
-public class Main {
+public class Array9 {
     public int solution(int n, int[][] arr) {
         int max = 0;
         int sum_x = 0;
@@ -31,7 +33,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        Array9 T = new Array9();
         Scanner kb = new Scanner(System.in);
         int num = kb.nextInt();
         int[][] numArr = new int[num][num];
