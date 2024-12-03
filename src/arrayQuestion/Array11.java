@@ -1,9 +1,10 @@
-import java.util.*;
+package arrayQuestion;
 
+import java.util.Scanner;
 
 
 //11번 12번 다시 풀어보기 for문 논리적으로 설계하는것의 중요성
-public class Main {
+public class Array11 {
     public int solution(int n, int[][] arr) {
         //첫번째 for문 i : 학생
         //두번째 for문 j : 비교 학생
@@ -29,7 +30,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        Array11 T = new Array11();
         Scanner kb = new Scanner(System.in);
         int num = kb.nextInt();
         int[][] numArr = new int[num+1][6];
