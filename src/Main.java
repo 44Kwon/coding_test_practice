@@ -1,21 +1,11 @@
 import java.util.*;
 
 
-//슬라이딩 윈도우 문제 다시한번 생각해볼것
+
+//어려움 꼭 다시풀어볼것. 방법은 아나 식 세우는게 어려움
 public class Main {
-    public int solution(int n, int m, int[] arr) {
-        int answer = 0;
-        for (int i = 0; i < m; i++) {
-            answer += arr[i];
-        }
-        int slide = answer;
-
-        for (int i = m; i < n; i++) {
-            slide = slide + arr[i] - arr[i-m];
-            answer = Math.max(answer, slide);
-        }
-
-        return answer;
+    public int solution(int n,int m, int[] arr) {
+        return 0;
     }
 
     public static void main(String[] args) {
@@ -29,7 +19,7 @@ public class Main {
         }
 
 
-        System.out.println(T.solution(num1,num2, num1Arr));
+        System.out.println(T.solution(num1,num2,num1Arr));
 
 //        for (int i : T.solution(num1, num2, num1Arr)) {
 //            System.out.print(i + " ");
