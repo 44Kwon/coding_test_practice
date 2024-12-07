@@ -1,8 +1,10 @@
-import java.util.*;
+package slidingwindowQuestion;
+
+import java.util.Scanner;
 
 
 //슬라이딩 윈도우 문제 다시한번 생각해볼것
-public class Main {
+public class SlidingWindow3 {
     public int solution(int n, int m, int[] arr) {
         int answer = 0;
         for (int i = 0; i < m; i++) {
@@ -19,7 +21,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        SlidingWindow3 T = new SlidingWindow3();
         Scanner kb = new Scanner(System.in);
         int num1 = kb.nextInt();
         int[] num1Arr = new int[num1];
