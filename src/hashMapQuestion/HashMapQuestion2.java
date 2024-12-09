@@ -1,11 +1,13 @@
-import java.util.*;
+package hashMapQuestion;
 
+import java.util.HashMap;
+import java.util.Scanner;
 
 
 //map에 하나 넣고 하나씩 빼면서 0이면 통과되게. for문을 줄일 수 있음.
 //길이가 같다는 가정하에 어차피 전부가 0인걸 증명할 필요도 없다.
 //왜냐하면 -1할때 비교 문자에 다른게 껴있거나 0일때는 바로 NO로 종료시키는 검증이 있으면 되기 때문이다.
-public class Main {
+public class HashMapQuestion2 {
     public String solution(String str1, String str2) {
         HashMap<Character, Integer> map1 = new HashMap<>();
         HashMap<Character, Integer> map2 = new HashMap<>();
@@ -31,7 +33,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        HashMapQuestion2 T = new HashMapQuestion2();
         Scanner kb = new Scanner(System.in);
         String str1 = kb.next();
         String str2 = kb.next();
