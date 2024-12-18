@@ -1,7 +1,12 @@
-import java.util.*;
+package stackAndQueueQuestion;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Scanner;
 
 
-public class Main {
+//후위식 연산. stack이용해야함
+public class StackQuestion4 {
     public int solution(String s) {
         Deque<Integer> stack = new ArrayDeque<>();
         for (char c : s.toCharArray()) {
@@ -28,7 +33,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        StackQuestion4 T = new StackQuestion4();
         Scanner kb = new Scanner(System.in);
         String s = kb.next();
 //        int[][] numArr1 = new int[num1][num1];
