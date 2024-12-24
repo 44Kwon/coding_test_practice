@@ -1,4 +1,8 @@
-import java.util.*;
+package stackAndQueueQuestion;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Scanner;
 
 
 class Person {
@@ -13,7 +17,7 @@ class Person {
 
 //Person 객체를 만들어서 비교하면서.... 풀어보기 큐문제 8번 (응급실) , 스택문제 5번과 더불어 어려움
 //for break 하기전에 poll한 것을 null하는게 keypoint임
-public class Main {
+public class QueueQuestion8 {
     public int solution(int num1, int num2, int[] arr) {
         Deque<Person> queue = new ArrayDeque<>();
         for (int i = 0; i < arr.length; i++) {
@@ -41,7 +45,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        QueueQuestion8 T = new QueueQuestion8();
         Scanner kb = new Scanner(System.in);
         int num1 = kb.nextInt();
         int num2 = kb.nextInt();
