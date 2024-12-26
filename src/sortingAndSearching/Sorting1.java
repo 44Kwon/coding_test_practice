@@ -1,14 +1,27 @@
-import java.util.*;
+package sortingAndSearching;
 
-//삽입정렬
-public class Main {
+import java.util.Scanner;
+
+//선택정렬
+public class Sorting1 {
     public int[] solution(int num, int[] arr) {
+
+
+        for (int i = 0; i < arr.length-1; i++) {
+            int idx = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[idx] > arr[j]) idx = j;
+            }
+            int tmp = arr[i];
+            arr[i] = arr[idx];
+            arr[idx] = tmp;
+        }
 
         return arr;
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        Sorting1 T = new Sorting1();
         Scanner kb = new Scanner(System.in);
         int num1 = kb.nextInt();
 //        int num2 = kb.nextInt();
