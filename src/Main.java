@@ -1,21 +1,17 @@
 import java.util.*;
 
-//삽입정렬
-public class Main {
-    public int[] solution(int num, int[] arr) {
 
-        return arr;
+public class Main {
+    public int solution(int n) {
+        return 0;
     }
 
     public static void main(String[] args) {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
         int num1 = kb.nextInt();
-//        int num2 = kb.nextInt();
-        int[] numArr = new int[num1];
-        for (int i = 0; i < num1; i++) {
-            numArr[i] = kb.nextInt();
-        }
+
+//        int[][] numArr = new int[num1][2];
 
 //        int[][] numArr1 = new int[num1][num1];
 //        for (int i = 0; i < num1; i++) {
@@ -30,10 +26,10 @@ public class Main {
 //        }
 
 
-//        System.out.println(T.solution(num1,num2,numArr));
+        System.out.println(T.solution(num1));
 
-        for (int i : T.solution(num1, numArr)) {
-            System.out.print(i + " ");
-        }
+//        for (int i : T.solution(num1, new int[]{1, 2, 3})) {
+//            System.out.print(i + " ");
+//        }
     }
 }
