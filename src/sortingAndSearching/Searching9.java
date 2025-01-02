@@ -1,8 +1,11 @@
-import java.util.*;
+package sortingAndSearching;
+
+import java.util.Arrays;
+import java.util.Scanner;
 
 
 //결정알고리즘, 어려움
-public class Main {
+public class Searching9 {
 
     public int count(int[] arr, int capacity) {
         int cnt = 1, sum = 0;
@@ -37,7 +40,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        Searching9 T = new Searching9();
         Scanner kb = new Scanner(System.in);
         int num1 = kb.nextInt();
         int num2 = kb.nextInt();

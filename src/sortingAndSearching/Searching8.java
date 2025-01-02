@@ -1,32 +1,23 @@
-import java.util.*;
+package sortingAndSearching;
+
+import java.util.Arrays;
+import java.util.Scanner;
 
 
-//결정알고리즘, 어려움
-public class Main {
-
-    public int count(int[] arr, int capacity) {
-        int cnt = 1, sum = 0;
-        for (int x : arr) {
-            if(sum+x > capacity) {
-                cnt++;
-                sum=x;
-            } else {
-                sum += x;
-            }
-        }
-
-        return cnt;
-    }
-
+//이분검색 알고리즘
+public class Searching8 {
     public int solution(int n, int m, int[] arr) {
         int answer = 0;
-        int lt = Arrays.stream(arr).max().getAsInt();
-        int rt = Arrays.stream(arr).sum();
+        Arrays.sort(arr);
+        //이분검색
+        int lt = 0, rt = n-1;
 
         while(lt <= rt) {
-            int mid = (lt + rt) / 2;
-            if (count(arr, mid) <= m) {
-                answer = mid;
+            int mid = (lt+rt)/2;
+            if (arr[mid] == m) {
+                answer = mid+1;
+                break;
+            } else if (arr[mid] > m) {
                 rt = mid-1;
             } else {
                 lt = mid+1;
@@ -37,7 +28,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        Searching8 T = new Searching8();
         Scanner kb = new Scanner(System.in);
         int num1 = kb.nextInt();
         int num2 = kb.nextInt();
